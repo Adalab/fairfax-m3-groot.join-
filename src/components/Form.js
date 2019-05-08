@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-import FormDesign from './FormDesign';
+import Collapsibles from './Collapsibles';
 
 class Form extends Component{
     render(){
         return(
-            <FormDesign />  
+            <Collapsibles />  
+            <Collapsibles />  
+            <Collapsibles />  
+
         )
     }
 }
