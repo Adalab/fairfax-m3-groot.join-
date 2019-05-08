@@ -1,0 +1,23 @@
+
+@import 'core/variables';
+@import 'core/mixins';
+
+@import 'layout/base';
+@import 'layout/header';
+@import 'layout/landing';
+@import 'layout/footer';
+
+
+//components
+@import 'components/buttons';
+@import 'components/theme-colors';
+@import 'components/form-design';
+@import 'components/form-fill';
+
+//Pages
+@import 'pages/form';
+@import 'pages/main-page';
+
+
+
+

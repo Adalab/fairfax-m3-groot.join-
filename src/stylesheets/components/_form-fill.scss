@@ -1,0 +1,34 @@
+.fieldset__fill-container {
+    font-family: $font-primary;
+    font-size:0.875rem;
+    color: $color-green700;
+    display:flex;
+    flex-direction: column;
+    border-bottom: 1px solid $color-greyBgcLanding;
+    padding-bottom: 30px;
+}
+
+.title-label {
+    margin-bottom:6px;
+    margin-top:20px;
+}
+
+.title-label:first-child {
+    margin-top:25px;
+}
+
+.input-box {
+    border: 1px solid $color-green100;
+    padding: 4px;
+    color: $color-greyFooter;
+}
+
+.input__file{
+    border:0;
+}
+.js__profile-container{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+}
