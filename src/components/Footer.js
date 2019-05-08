@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import logoAdalab from "./images/logo-adalab.png";
-
+import logoAdalab from "../images/logo-adalab.png";
 
 class Footer extends Component {
     render () {
@@ -13,6 +12,5 @@ class Footer extends Component {
         return footer;
     };
 };
-
 
 export default Footer;
