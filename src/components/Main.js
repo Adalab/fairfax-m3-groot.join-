@@ -6,7 +6,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main-page__container">
-                <Preview />
+                <Preview name='Miren' job='Fron-end developer'/>
                 <Form />
             </div>
         )

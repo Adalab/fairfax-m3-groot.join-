@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import App from './App';
 
 class Preview extends Component {
     render() {
@@ -10,8 +11,8 @@ class Preview extends Component {
                         Reset
                     </button>
                     <section className="card__preview ">
-                        <p className="name">Nombre Apellido</p>
-                        <p className="job">Front-end developer</p>
+                        <p className="name">{this.props.name}</p>
+                        <p className="job">{this.props.job}</p>
                         <div className="card__photo js__profile-image"></div>
                         <ul className="social__links">
                             <li>
