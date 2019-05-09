@@ -8,7 +8,7 @@ class FormShare extends Component {
                     <legend className="fieldset__title-text">Comparte</legend>
                     <i className="fas fa-chevron-down form__arrow-icons arrow3"></i>
                 </div>
-                <div className="fieldset__share-container form__share hide">
+                <div className="fieldset__share-container form__share ">{/* borramos clase hide */}
                     <button className="button__create" type="button">
                         <i className="far fa-address-card form__card-icon"></i>
                         Crear tarjeta

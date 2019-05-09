@@ -8,7 +8,7 @@ class FormFill extends Component {
                     <legend className="fieldset__title-text">Rellena</legend>
                     <i className="form__arrow-icons arrow2 fas fa-chevron-down"></i>
                 </div>
-                <div className="fieldset__fill-container wrapper__fill hide">
+                <div className="fieldset__fill-container wrapper__fill"> {/* borramos clase hide */}
                     <label for="name" className="title-label">Nombre completo</label>
                     <input type="text" id="name" name="name" placeholder="Ej: Mary Fairfax" className="input-box" />
 
@@ -16,7 +16,7 @@ class FormFill extends Component {
                     <input type="text" id="position" name="job" placeholder="Ej: Front-end developer" required className="input-box" />
 
                     <label for="profile-picture" className="title-label">Foto de perfil</label>
-                    <input type="file" id="profile-picture" name="photo" className="js__profile-upload-btn hide" value="Añadir imagen" required />
+                    <input type="file" id="profile-picture" name="photo" className="js__profile-upload-btn" required /> {/* borramos clase hide */}
                     <div className="js__profile-container">
                         <div className="js__profile-preview thumbnail"></div>
                         <button type="button" className="js__profile-trigger button__add-image">Añadir imagen</button>
