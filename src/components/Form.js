@@ -7,7 +7,7 @@ import FormShare from './FormShare';
 class Form extends Component {
   render() {
     return (
-      < React.Fragment>
+      < form className="main-form" action="">
 
         <Collapsibles>
           <FormDesign />
@@ -21,7 +21,7 @@ class Form extends Component {
           <FormShare />
         </Collapsibles >
 
-      </ React.Fragment>
+      </form>
 
     )
   }
