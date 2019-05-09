@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class InputRadio extends Component{
   render(){
@@ -11,6 +12,11 @@ class InputRadio extends Component{
       </label>
     )
   }
+}
+
+InputRadio.propTypes = {
+  id: PropTypes.string,
+  number:PropTypes.number,
 }
 
 export default InputRadio;
