@@ -13,15 +13,8 @@ class Collapsibles extends Component {
 
   handleClick() {
     this.setState((prevState, props) => {
-      let nextState;
-      if (prevState.open) {
-        nextState = false;
-      } else {
-        nextState = true;
-      }
-
       return {
-        open: nextState,
+        open: prevState.open ? false : true,
       };
     });
   }
