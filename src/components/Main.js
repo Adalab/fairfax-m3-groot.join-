@@ -18,14 +18,14 @@ class Main extends Component {
             [inputKey]:inputValueFromChild
         })   
     }
-    info = () =>{
-        console.log(this);
+    // info = () =>{
+    //     console.log(this);
         
-    }
+    // }
     render() {
         return (
             <div className="main-page__container">
-            <button onClick={this.info}>INFO</button>
+            {/* <button onClick={this.info}>INFO</button> */}
                 <Preview 
                 name={this.state.name}
                 job={this.state.job}

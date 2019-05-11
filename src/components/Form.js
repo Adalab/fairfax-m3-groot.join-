@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Collapsibles from './Collapsibles';
-// import FormDesign from './FormDesign';
+import FormDesign from './FormDesign';
 import FormFill from './FormFill';
-// import FormShare from './FormShare';
+import FormShare from './FormShare';
 
 class Form extends Component {
   render() {
@@ -11,7 +11,7 @@ class Form extends Component {
       < form className="main-form" action="">
 
         <Collapsibles>
-          {/* <FormDesign /> */}
+          <FormDesign />
         </ Collapsibles >
 
         <Collapsibles>
@@ -19,7 +19,7 @@ class Form extends Component {
         </ Collapsibles >
 
         <Collapsibles>
-          {/* <FormShare /> */}
+          <FormShare />
         </Collapsibles >
 
       </form>
