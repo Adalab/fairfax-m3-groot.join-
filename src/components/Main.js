@@ -3,7 +3,7 @@ import Preview from './Preview';
 import Form from './Form';
 
 let userCard = {
-    name: 'Antonella',
+    name: '',
     job: '',
     phone: '',
     email: '',
@@ -17,19 +17,31 @@ class Main extends Component {
 
     constructor(props) {
         super(props);
-        this.handleChangeText = this.handleChangeText.bind(this);
+        this.handleUpdateCard = this.handleUpdateCard.bind(this);
+        this.state = {
+            name: '',
+            job: '',
+            phone: '',
+            email: '',
+            linkedin: '',
+            github: '',
+            photo: '',
+            palette: 1
+        }
     }
 
-    handleChangeText(newText) {
-        console.log(newText);
+    handleUpdateCard(event, key) {
+        console.log(key, event.currentTarget.value);
+        this.setState({ [key]: event.currentTarget.value });
+        userCard[key] = event.currentTarget.value;
     }
 
     render() {
         return (
             <div className="main-page__container">
-                <Preview card={userCard}/>
+                <Preview card={this.state}/>
                 <Form
-                    eventText={this.handleChangeText}
+                    updateCard={this.handleUpdateCard}
                     card={userCard}
                 />
             </div>

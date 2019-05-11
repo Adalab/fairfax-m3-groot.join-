@@ -35,7 +35,7 @@ class Form extends Component {
             phone={phone}
             email={email}
             tel={tel}
-            eventText={this.props.eventText}
+            updateCard={this.props.updateCard}
           />
         </ Collapsibles >
 

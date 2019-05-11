@@ -18,14 +18,15 @@ class FormFill extends Component {
                         label="Nombre completo"
                         type="text"
                         placeholder="Ej: Mary Fairfax"
-                        eventText={this.props.eventText}
+                        updateCard={this.props.updateCard}
                     />
 
                     <Input 
-                        id="position"
+                        id="job"
                         label="Puesto"
                         type="text"
                         placeholder="Ej: Front-end developer"
+                        updateCard={this.props.updateCard}
                     />
 
                     <label htmlFor="profile-picture" className="title-label">Foto de perfil</label>
@@ -40,6 +41,7 @@ class FormFill extends Component {
                         label="Teléfono"
                         type="tel"
                         placeholder="Ej: 666-55-44-33"
+                        updateCard={this.props.updateCard}
                     />
 
                     <Input 
@@ -47,6 +49,7 @@ class FormFill extends Component {
                         label="Email"
                         type="email"
                         placeholder="Ej: mary-fairfax@gmail.com"
+                        updateCard={this.props.updateCard}
                     />
 
                     <Input 
@@ -54,6 +57,7 @@ class FormFill extends Component {
                         label="Linkedin"
                         type="url"
                         placeholder="Ej: https://linkedin.com/in/mary.fairfax"
+                        updateCard={this.props.updateCard}
                     />
 
                     <Input 
@@ -61,6 +65,7 @@ class FormFill extends Component {
                         label="Github"
                         type="url"
                         placeholder="Ej: https://github.com/mary-fairfax"
+                        updateCard={this.props.updateCard}
                     />
 
                 </div>

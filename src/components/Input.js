@@ -4,15 +4,23 @@ import PropTypes from 'prop-types';
 class Input extends Component {
 
   render() {
+    const {
+      id,
+      label,
+      type,
+      placeholder,
+      updateCard
+    } = this.props;
     return (
       <React.Fragment>
-        <label htmlFor={this.props.id} className="title-label">{this.props.label}</label>
+        <label htmlFor={id} className="title-label">{label}</label>
         <input 
-          type={this.props.type}
-          id={this.props.id}
-          name={this.props.id}
-          placeholder={this.props.placeholder}
+          type={type}
+          id={id}
+          name={id}
+          placeholder={placeholder}
           className="input-box"
+          onChange={(event) => updateCard(event, id)}
         />
       </React.Fragment>
     );
