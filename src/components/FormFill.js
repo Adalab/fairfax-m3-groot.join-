@@ -6,11 +6,6 @@ class FormFill extends Component {
     render() {
         return (
             <fieldset className="form__fieldset">
-                <div className="fieldset__title trigger__fill">
-                    <i className="far fa-keyboard form__icons"></i>
-                    <legend className="fieldset__title-text">Rellena</legend>
-                    <i className="form__arrow-icons arrow2 fas fa-chevron-down"></i>
-                </div>
                 <div className="fieldset__fill-container wrapper__fill">
                 
                     <Input 

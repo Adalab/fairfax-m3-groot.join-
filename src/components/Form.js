@@ -21,11 +21,11 @@ class Form extends Component {
     return (
       < form className="main-form" action="">
 
-        <Collapsibles>
+        <Collapsibles name="Diseña" icon="far fa-object-ungroup form__icons">
           <FormDesign color={palette}/>
         </ Collapsibles >
 
-        <Collapsibles>
+        <Collapsibles name="Rellena" icon="far fa-keyboard form__icons">
           <FormFill 
             name={name}
             job={job}
@@ -39,8 +39,8 @@ class Form extends Component {
           />
         </ Collapsibles >
 
-        <Collapsibles card={this.props}>
-          <FormShare />
+        <Collapsibles name="Comparte" icon="fas fa-share-alt form__icons">
+          <FormShare card={this.props} />
         </Collapsibles >
 
       </form>
