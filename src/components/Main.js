@@ -8,10 +8,12 @@ class Main extends Component {
         this.state={
             name:'',
             job:'',
+            phone:'',
+            email:'',
         }
     }
-    getInputChildValue = inputKey => (inputValueFromChild) =>{
-        console.log('main',inputKey, inputValueFromChild);
+    getInputChildValue = (inputKey) => (inputValueFromChild) =>{
+        // console.log('main',inputKey, inputValueFromChild);
         this.setState({
             [inputKey]:inputValueFromChild
         })   
@@ -24,7 +26,11 @@ class Main extends Component {
         return (
             <div className="main-page__container">
             <button onClick={this.info}>INFO</button>
-                <Preview />
+                <Preview 
+                name={this.state.name}
+                job={this.state.job}
+                tel={this.state.phone}
+                email={this.state.email}/>
                 <Form functionFromMain={this.getInputChildValue}/>
             </div>
         )

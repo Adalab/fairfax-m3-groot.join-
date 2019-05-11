@@ -11,17 +11,10 @@ class Input extends Component {
   }
 
   setInputValue(event) {
-    if (event.target.value) {
       this.setState({
         value: event.target.value
       });
       this.props.functionFromFormFill(event.target.value);
-    }
-    // else{
-    //     this.setState({
-    //         value:this.props.placeholder
-    //     })
-    //   }
   }
   render() {
     return (

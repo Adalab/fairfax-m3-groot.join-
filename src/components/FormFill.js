@@ -55,12 +55,14 @@ class FormFill extends Component {
             label="Teléfono"
             type="tel"
             placeholder="Ej: 666-55-44-33"
+            functionFromFormFill={functionFromForm('phone')}
           />
           <Input
             id="email"
             label="Email"
             type="email"
             placeholder="Ej: mary-fairfax@gmail.com"
+            functionFromFormFill={functionFromForm('email')}
           />
           <Input
             id="linkedin"
