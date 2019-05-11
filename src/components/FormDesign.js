@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import InputRadio from './InputRadio'
 
 class FormDesign extends Component{
     render(){
@@ -12,24 +13,9 @@ class FormDesign extends Component{
                 <div className="fieldset__theme-container">
                     <p className="theme__description">Colores</p>
                     <div className="theme-options__container">
-                        <label className="theme" for="theme-green">
-                            <input id="theme-green" type="radio" value="1" name="palette" className="theme-radio" checked/>
-                            <div className="color-box color-green1"></div>
-                            <div className="color-box color-green2"></div>
-                            <div className="color-box color-green3"></div>
-                        </label>
-                        <label className="theme" for="theme-red">
-                            <input id="theme-red" type="radio" value="2" name="palette" className="theme-radio"/>
-                            <div className="color-box color-red1"></div>
-                            <div className="color-box color-red2"></div>
-                            <div className="color-box color-red3"></div>
-                        </label>
-                        <label className="theme" for="theme-grey">
-                            <input id="theme-grey" type="radio" value="3" name="palette" className="theme-radio"/>
-                            <div className="color-box color-grey1"></div>
-                            <div className="color-box color-grey2"></div>
-                            <div className="color-box color-grey3"></div>
-                        </label>
+                        <InputRadio id='green' number={1}/>
+                        <InputRadio id='red' number={2}/>
+                        <InputRadio id='grey' number={3}/>
                     </div>
                 </div>
             </fieldset>
