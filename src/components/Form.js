@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import Collapsibles from './Collapsibles';
-import FormDesign from './FormDesign';
+// import FormDesign from './FormDesign';
 import FormFill from './FormFill';
-import FormShare from './FormShare';
+// import FormShare from './FormShare';
 
 class Form extends Component {
   render() {
+    const { functionFromMain } = this.props;
     return (
       < form className="main-form" action="">
 
         <Collapsibles>
-          <FormDesign />
+          {/* <FormDesign /> */}
         </ Collapsibles >
 
         <Collapsibles>
-          <FormFill />
+          <FormFill functionFromForm={functionFromMain}/>
         </ Collapsibles >
 
         <Collapsibles>
-          <FormShare />
+          {/* <FormShare /> */}
         </Collapsibles >
 
       </form>

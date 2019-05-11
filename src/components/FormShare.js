@@ -15,11 +15,11 @@ class FormShare extends Component {
                 </button>
                     <div className="card__created hide">
                         <h2 className="form__share-subtitle">La tarjeta ha sido creada:</h2>
-                        <a href="#" className="card__link" target="_blank"></a>
-                        <a className="share__twitter twitter-share-button-share" href="#" target="_blank">
+                        {/* <a href="" className="card__link" target="_blank"></a>
+                        <a className="share__twitter twitter-share-button-share" href="" target="_blank"> */}
                             <i className="fab fa-twitter form__icons-twitter"></i>
                             Compartir en twitter
-                    </a>
+                    {/* </a> */}
                     </div>
                 </div>
             </fieldset>

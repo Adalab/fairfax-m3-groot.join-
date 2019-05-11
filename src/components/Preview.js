@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
+// import FormFill from './FormFill'
 
 class Preview extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            name: 'Nombre Apellido'
+        }
+    }
+    handleInput(event){
+        if(event.target.value){
+          this.setState({
+            name: event.target.value
+          })
+        }else{
+          this.setState({
+            name: 'Nombre Apellido'
+          })
+        }
+    
+      }
     render() {
         const preview = (
             <aside className="section__preview theme--green">
@@ -10,7 +29,7 @@ class Preview extends Component {
                         Reset
                     </button>
                     <section className="card__preview ">
-                        <p className="name">Nombre Apellido</p>
+                        <p className="name">{this.state.name}</p>
                         <p className="job">Front-end developer</p>
                         <div className="card__photo js__profile-image"></div>
                         <ul className="social__links">
