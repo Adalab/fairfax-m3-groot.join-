@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import Input from './Input';
 
 class FormFill extends Component {
+
     render() {
         return (
             <fieldset className="form__fieldset">
-                <div className="fieldset__title trigger__fill">
-                    <i className="far fa-keyboard form__icons"></i>
-                    <legend className="fieldset__title-text">Rellena</legend>
-                    <i className="form__arrow-icons arrow2 fas fa-chevron-down"></i>
-                </div>
                 <div className="fieldset__fill-container wrapper__fill">
                 
                     <Input 
@@ -17,6 +13,7 @@ class FormFill extends Component {
                         label="Nombre completo"
                         type="text"
                         placeholder="Ej: Mary Fairfax"
+                        eventText={this.props.eventText}
                     />
 
                     <Input 
@@ -26,7 +23,7 @@ class FormFill extends Component {
                         placeholder="Ej: Front-end developer"
                     />
 
-                    <label for="profile-picture" className="title-label">Foto de perfil</label>
+                    <label htmlFor="profile-picture" className="title-label">Foto de perfil</label>
                     <input type="file" id="profile-picture" name="photo" className="js__profile-upload-btn" required /> {/* borramos clase hide */}
                     <div className="js__profile-container">
                         <div className="js__profile-preview thumbnail"></div>
