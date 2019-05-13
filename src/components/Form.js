@@ -6,17 +6,6 @@ import FormShare from './FormShare';
 
 class Form extends Component {
   render() {
-    const {
-      name,
-      job,
-      phone,
-      photo,
-      tel,
-      linkedin,
-      github,
-      palette,
-      email,
-    } = this.props.card;
 
     return (
       < form className="main-form" action="">
