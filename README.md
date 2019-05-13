@@ -1,23 +1,22 @@
 # Un caso de código heredado
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Proyecto de código heredado, escrito originariamente en [Vanilla JavaScript App](https://github.com/Adalab/fairfax-NaN-NotaName-), refactorizado y reconvertido en una SPA de React._
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+1. Clona el repositorio: git clone https://github.com/Adalab/fairfax-m3-groot.join.git
 
-### Pre-requisitos 📋
+2. También puedes hacer Fork y de este modo, copiarás éste repositorio directamente en tu perfil de GitHub.
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+3. Para lanzar el proyecto y verlo en el navegador: npm start
 
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+4. Para añadir y subir los cambios que realices: git add . / git commit -m 'mensaje' / git push origin 'nombre-de-la-rama'
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
+_Este proyecto está creado con [Create React App](https://github.com/facebook/create-react-app)._
+>- Puedes aprender más en [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+>- Para aprender React, echa un vistazo a la [documentación de React](https://reactjs.org/).
 
 ## Autoras ✒️
 
