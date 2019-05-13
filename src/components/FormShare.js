@@ -3,11 +3,6 @@ class FormShare extends Component {
     render() {
         return (
             <fieldset className="form__fieldset">
-                <div className="fieldset__title trigger__share">
-                    <i className="fas fa-share-alt form__icons"></i>
-                    <legend className="fieldset__title-text">Comparte</legend>
-                    <i className="fas fa-chevron-down form__arrow-icons arrow3"></i>
-                </div>
                 <div className="fieldset__share-container form__share ">{/* borramos clase hide */}
                     <button className="button__create" type="button">
                         <i className="far fa-address-card form__card-icon"></i>

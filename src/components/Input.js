@@ -23,6 +23,7 @@ class Input extends Component {
           {this.props.label}
         </label>
         <input
+
           type={this.props.type}
           id={this.props.id}
           name={this.props.id}
@@ -31,6 +32,7 @@ class Input extends Component {
           value={this.state.value}
           onChange={this.setInputValue}
           required
+      
         />
       </React.Fragment>
     );
@@ -38,10 +40,10 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.oneOf(["text", "url", "tel", "email"]),
-  placeholder: PropTypes.string,
-  label: PropTypes.string
-};
+  id: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['text', 'url', 'tel', 'email']).isRequired,
+  placeholder: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+}
 
 export default Input;
