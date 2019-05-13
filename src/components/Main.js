@@ -2,17 +2,6 @@ import React, { Component } from 'react';
 import Preview from './Preview';
 import Form from './Form';
 
-let userCard = {
-    name: 'Antonella',
-    job: '',
-    phone: '',
-    email: '',
-    linkedin: '',
-    github: '',
-    photo: '',
-    palette: 1
-};
-
 class Main extends Component {
 
     constructor(props) {
