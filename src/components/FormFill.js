@@ -3,8 +3,6 @@ import Input from "./Input";
 
 class FormFill extends Component {
   render() {
-
-
     return (
       <fieldset className="form__fieldset">
         
@@ -14,14 +12,14 @@ class FormFill extends Component {
             label="Nombre completo"
             type="text"
             placeholder="Ej: Mary Fairfax"
-            value=''
+            value={this.props.name}
           />
           <Input
-            id="position"
+            id="job"
             label="Puesto"
             type="text"
             placeholder="Ej: Front-end developer"
-            value=''
+            value={this.props.job}
           />
           <label htmlFor="profile-picture" className="title-label">
             Foto de perfil
@@ -48,6 +46,7 @@ class FormFill extends Component {
             label="Teléfono"
             type="tel"
             placeholder="Ej: 666-55-44-33"
+            value={this.props.phone}
                   />
           <Input
             id="email"

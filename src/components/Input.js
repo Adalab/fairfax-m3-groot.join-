@@ -22,7 +22,6 @@ class Input extends Component {
           {this.props.label}
         </label>
         <input
-
           type={this.props.type}
           id={this.props.id}
           name={this.props.id}
@@ -31,7 +30,6 @@ class Input extends Component {
           value={this.state.value}
           onChange={this.setInputValue}
           required
-      
         />
       </React.Fragment>
     );

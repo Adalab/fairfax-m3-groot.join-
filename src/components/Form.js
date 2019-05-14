@@ -5,6 +5,7 @@ import FormFill from './FormFill';
 import FormShare from './FormShare';
 
 class Form extends Component {
+
   render() {
 
     return (
@@ -14,7 +15,7 @@ class Form extends Component {
           <FormDesign color={this.palette}/>
         </ Collapsibles >
         <Collapsibles name="Rellena" icon="far fa-keyboard form__icons">
-          <FormFill />
+          <FormFill name={this.props.name} job={this.props.job} phone={this.props.phone} />
         </ Collapsibles >
         <Collapsibles name="Comparte" icon="fas fa-share-alt form__icons">
           <FormShare card={this.props} />
