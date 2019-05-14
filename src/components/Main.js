@@ -13,15 +13,12 @@ class Main extends Component {
         }
     }
     getInputChildValue = (inputKey) => (inputValueFromChild) =>{
-        // console.log('main',inputKey, inputValueFromChild);
+        
         this.setState({
             [inputKey]:inputValueFromChild
         })   
     }
-    // info = () =>{
-    //     console.log(this);
-        
-    // }
+  
     render() {
         return (
             <div className="main-page__container">
@@ -31,7 +28,7 @@ class Main extends Component {
                 job={this.state.job}
                 tel={this.state.phone}
                 email={this.state.email}/>
-                <Form functionFromMain={this.getInputChildValue}/>
+                <Form />
             </div>
         )
     }

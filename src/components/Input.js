@@ -14,8 +14,7 @@ class Input extends Component {
       this.setState({
         value: event.target.value
       });
-      this.props.functionFromFormFill(event.target.value);
-  }
+        }
   render() {
     return (
       <React.Fragment>

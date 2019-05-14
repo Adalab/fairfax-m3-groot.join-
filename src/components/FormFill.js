@@ -3,8 +3,7 @@ import Input from "./Input";
 
 class FormFill extends Component {
   render() {
-    const { functionFromForm } = this.props;
-    const { value } = this.props;
+
 
     return (
       <fieldset className="form__fieldset">
@@ -15,16 +14,14 @@ class FormFill extends Component {
             label="Nombre completo"
             type="text"
             placeholder="Ej: Mary Fairfax"
-            value={value}
-            functionFromFormFill={functionFromForm('name')}
+            value=''
           />
           <Input
             id="position"
             label="Puesto"
             type="text"
             placeholder="Ej: Front-end developer"
-            value={value}
-            functionFromFormFill={functionFromForm('job')}
+            value=''
           />
           <label htmlFor="profile-picture" className="title-label">
             Foto de perfil
@@ -51,15 +48,13 @@ class FormFill extends Component {
             label="Teléfono"
             type="tel"
             placeholder="Ej: 666-55-44-33"
-            functionFromFormFill={functionFromForm('phone')}
-          />
+                  />
           <Input
             id="email"
             label="Email"
             type="email"
             placeholder="Ej: mary-fairfax@gmail.com"
-            functionFromFormFill={functionFromForm('email')}
-          />
+                    />
           <Input
             id="linkedin"
             label="Linkedin"
