@@ -10,20 +10,23 @@ class FormDesign extends Component {
                     <div className="theme-options__container">
                         <InputRadio
                             id='green'
-                            option={1}
+                            option={'1'}
                             palette={this.props.palette}
+                            checked={'1' === this.props.palette}
                             handleChangeCard={this.props.handleChangeCard}
                         />
                         <InputRadio
                             id='red'
-                            option={2}
+                            option={'2'}
                             palette={this.props.palette}
+                            checked={'2' === this.props.palette}
                             handleChangeCard={this.props.handleChangeCard}
                         />
                         <InputRadio
                             id='grey'
-                            option={3}
+                            option={'3'}
                             palette={this.props.palette}
+                            checked={'3' === this.props.palette}
                             handleChangeCard={this.props.handleChangeCard}
                         />
                     </div>

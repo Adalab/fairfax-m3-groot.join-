@@ -7,7 +7,7 @@ class Main extends Component {
     super(props);
     this.state = {
       card: {
-        palette: 1,
+        palette: '1',
         name: "",
         job: "",
         phone: "",

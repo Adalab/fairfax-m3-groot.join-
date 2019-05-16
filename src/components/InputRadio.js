@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 class InputRadio extends Component {
   render() {
+    console.log(this.props);
+    
     return (
       <label className="theme" htmlFor={`theme-${this.props.id}`}>
         <input
@@ -11,7 +13,7 @@ class InputRadio extends Component {
           value={this.props.option}
           name="palette"
           className="theme-radio"
-          checked={this.props.palette}
+          checked={this.props.checked}
           onChange={this.props.handleChangeCard}
         />
         <div className={`color-box color-${this.props.id}1`}></div>
