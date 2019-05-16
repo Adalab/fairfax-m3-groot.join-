@@ -18,7 +18,6 @@ class Main extends Component {
       }
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
-
   }
 
   handleChangeCard(event) {
