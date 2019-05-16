@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 class Preview extends Component {
   render() {
+
     const preview = (
       <aside className="section__preview theme--green">
         <div>

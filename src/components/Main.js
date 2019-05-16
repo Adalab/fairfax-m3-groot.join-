@@ -7,7 +7,7 @@ class Main extends Component {
     super(props);
     this.state = {
       card: {
-        palette: "",
+        palette: 1,
         name: "",
         job: "",
         phone: "",
@@ -18,12 +18,13 @@ class Main extends Component {
       }
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
-    
-}
+
+  }
 
   handleChangeCard(event) {
     const value = event.currentTarget.value;
     const name = event.currentTarget.name;
+    console.log(name, value);
     this.setState(prevState => {
       return {
         card: {
@@ -39,6 +40,7 @@ class Main extends Component {
       <div className="main-page__container">
         {/* <button onClick={this.info}>INFO</button> */}
         <Preview
+          palette={this.state.card.palette}
           name={this.state.card.name}
           job={this.state.card.job}
           phone={this.state.card.phone}
@@ -47,6 +49,7 @@ class Main extends Component {
           github={this.state.card.github}
         />
         <Form
+          palette={this.state.card.palette}
           name={this.state.card.name}
           job={this.state.card.job}
           phone={this.state.card.phone}
