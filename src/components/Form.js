@@ -15,7 +15,15 @@ class Form extends Component {
           <FormDesign color={this.palette}/>
         </ Collapsibles >
         <Collapsibles name="Rellena" icon="far fa-keyboard form__icons">
-          <FormFill name={this.props.name} job={this.props.job} phone={this.props.phone} email={this.props.email} linkedin={this.props.linkedin}/>
+          <FormFill 
+          name={this.props.name} 
+          job={this.props.job} 
+          phone={this.props.phone} 
+          email={this.props.email} 
+          linkedin={this.props.linkedin} 
+          github={this.props.github}
+          handleChangeCard={this.props.handleChangeCard}
+        />
         </ Collapsibles >
         <Collapsibles name="Comparte" icon="fas fa-share-alt form__icons">
           <FormShare card={this.props} />

@@ -38,7 +38,7 @@ class Preview extends Component {
                 </a>
               </li>
               <li>
-                <a className="social__button github" href="#" target="_blank">
+                <a className="social__button github" href={this.props.github} target="_blank">
                   <i className="fab fa-github-alt" />
                 </a>
               </li>
