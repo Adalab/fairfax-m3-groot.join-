@@ -17,7 +17,9 @@ class Preview extends Component {
             <p className="job">
               {this.props.job ? this.props.job : "Front-end developer"}
             </p>
+
             <div className="card__photo js__profile-image" />
+
             <ul className="social__links">
               <li>
                 <a className="social__button phone__icon" href={`tel:${this.props.phone}`}>
