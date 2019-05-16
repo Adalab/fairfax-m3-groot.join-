@@ -5,7 +5,7 @@ class FormFill extends Component {
   render() {
     return (
       <fieldset className="form__fieldset">
-        
+
         <div className="fieldset__fill-container wrapper__fill">
           <Input
             id="name"
@@ -47,18 +47,20 @@ class FormFill extends Component {
             type="tel"
             placeholder="Ej: 666-55-44-33"
             value={this.props.phone}
-                  />
+          />
           <Input
             id="email"
             label="Email"
             type="email"
             placeholder="Ej: mary-fairfax@gmail.com"
-                    />
+            value={this.props.email}
+          />
           <Input
             id="linkedin"
             label="Linkedin"
             type="url"
             placeholder="Ej: https://linkedin.com/in/mary.fairfax"
+            value={this.props.linkedin}
           />
           <Input
             id="github"
