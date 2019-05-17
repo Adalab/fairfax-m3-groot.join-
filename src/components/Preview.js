@@ -3,8 +3,17 @@ import PropTypes from "prop-types";
 
 class Preview extends Component {
   render() {
+    const theme =  (palette) => {
+      if (parseInt(palette) === 1) {
+        return 'theme--green';
+      } else if (parseInt(palette) === 2) {
+        return 'theme--red';
+      } else if (parseInt(palette) === 3) {
+        return 'theme--grey';
+      }
+    }
     const preview = (
-      <aside className="section__preview theme--green">
+      <aside className={`section__preview ${theme(this.props.palette)}`}>
         <div>
           <button className="button__reset">
             <i className="far fa-trash-alt" />
@@ -33,12 +42,12 @@ class Preview extends Component {
                 </a>
               </li>
               <li>
-                <a className="social__button linkedin" href="#" target="_blank">
+                <a className="social__button linkedin" href={this.props.linkedin} target="_blank">
                   <i className="fab fa-linkedin-in" />
                 </a>
               </li>
               <li>
-                <a className="social__button github" href="#" target="_blank">
+                <a className="social__button github" href={this.props.github} target="_blank">
                   <i className="fab fa-github-alt" />
                 </a>
               </li>

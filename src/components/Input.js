@@ -2,19 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Input extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ""
-    };
-    this.setInputValue = this.setInputValue.bind(this);
-  }
-
-  setInputValue(event) {
-      this.setState({
-        value: event.target.value
-      });
-        }
+  
   render() {
     return (
       <React.Fragment>
@@ -22,16 +10,14 @@ class Input extends Component {
           {this.props.label}
         </label>
         <input
-
           type={this.props.type}
           id={this.props.id}
           name={this.props.id}
           placeholder={this.props.placeholder}
           className="input-box"
-          value={this.state.value}
-          onChange={this.setInputValue}
+          value={this.props.value}
+          onChange={this.props.handleChangeCard}
           required
-      
         />
       </React.Fragment>
     );
