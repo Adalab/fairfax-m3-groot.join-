@@ -47,6 +47,7 @@ class Main extends Component {
           palette={this.state.card.palette}
           name={this.state.card.name}
           job={this.state.card.job}
+          photo={this.state.card.photo}
           phone={this.state.card.phone}
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
@@ -56,11 +57,13 @@ class Main extends Component {
           palette={this.state.card.palette}
           name={this.state.card.name}
           job={this.state.card.job}
+          photo={this.state.card.photo}
           phone={this.state.card.phone}
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
           github={this.state.card.github}
           handleChangeCard={this.handleChangeCard}
+
         />
       </div>
     );
