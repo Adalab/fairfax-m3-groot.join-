@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import groot from "./../images/groot.jpeg";
 
 class Preview extends Component {
   render() {
@@ -26,7 +27,7 @@ class Preview extends Component {
             <p className="job">
               {this.props.job ? this.props.job : "Front-end developer"}
             </p>
-            <div className="card__photo js__profile-image" />
+            <div className="card__photo" style={{backgroundImage: `url(${this.props.photo || groot})`}} />
             <ul className="social__links">
               <li>
                 <a className="social__button phone__icon" href={`tel:${this.props.phone}`}>

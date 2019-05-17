@@ -26,6 +26,9 @@ class Form extends Component {
             linkedin={this.props.linkedin}
             github={this.props.github}
             handleChangeCard={this.props.handleChangeCard}
+            getImage={this.props.getImage}
+            photo={this.props.photo}
+
           />
         </ Collapsibles >
         <Collapsibles name="Comparte" icon="fas fa-share-alt form__icons">

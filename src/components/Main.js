@@ -18,6 +18,24 @@ class Main extends Component {
       }
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
+    this.getImage = this.getImage.bind(this);
+
+  }
+
+  getImage(image) {
+    this.setState(
+      prevState => {
+        return {
+          card: {
+            ...prevState.card,
+            photo: image
+          }
+        };
+      },
+      () => {
+        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
+      }
+    );
   }
 
   handleChangeCard(event) {
@@ -48,6 +66,7 @@ class Main extends Component {
           name={this.state.card.name}
           job={this.state.card.job}
           phone={this.state.card.phone}
+          photo={this.state.card.photo}
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
           github={this.state.card.github}
@@ -57,10 +76,12 @@ class Main extends Component {
           name={this.state.card.name}
           job={this.state.card.job}
           phone={this.state.card.phone}
+          photo={this.state.card.photo}
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
           github={this.state.card.github}
           handleChangeCard={this.handleChangeCard}
+          getImage={this.getImage}
         />
       </div>
     );

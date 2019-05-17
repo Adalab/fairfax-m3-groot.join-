@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Input from "./Input";
+import InputFR from "./InputFR";
 
 class FormFill extends Component {
   render() {
@@ -23,10 +24,12 @@ class FormFill extends Component {
             value={this.props.job}
             handleChangeCard={this.props.handleChangeCard}
           />
-          <label htmlFor="profile-picture" className="title-label">
-            Foto de perfil
-          </label>
-          <input
+          
+          <InputFR 
+            getImage={this.props.getImage}
+            photo={this.props.photo}
+          />
+          {/* <input
             type="file"
             id="profile-picture"
             name="photo"
@@ -34,15 +37,15 @@ class FormFill extends Component {
             required
           />{" "}
           {/* borramos clase hide */}
-          <div className="js__profile-container">
+          {/* <div className="js__profile-container">
             <div className="js__profile-preview thumbnail" />
             <button
               type="button"
               className="js__profile-trigger button__add-image"
             >
               Añadir imagen
-            </button>
-          </div>
+            </button> */} 
+          {/* </div> */}
           <Input
             id="phone"
             label="Teléfono"
