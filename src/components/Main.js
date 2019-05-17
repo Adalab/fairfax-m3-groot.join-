@@ -7,7 +7,7 @@ class Main extends Component {
     super(props);
     this.state = {
       card: {
-        palette: '1',
+        palette: "1",
         name: "",
         job: "",
         phone: "",
@@ -24,14 +24,19 @@ class Main extends Component {
     const value = event.currentTarget.value;
     const name = event.currentTarget.name;
     console.log(name, value);
-    this.setState(prevState => {
-      return {
-        card: {
-          ...prevState.card,
-          [name]: value
-        }
-      };
-    });
+    this.setState(
+      prevState => {
+        return {
+          card: {
+            ...prevState.card,
+            [name]: value
+          }
+        };
+      },
+      () => {
+        localStorage.setItem("card", JSON.stringify(this.state.card));
+      }
+    );
   }
 
   render() {
