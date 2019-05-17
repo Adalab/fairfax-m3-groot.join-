@@ -34,7 +34,7 @@ class Main extends Component {
         };
       },
       () => {
-        localStorage.setItem("card", JSON.stringify(this.state.card));
+        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
       }
     );
   }
