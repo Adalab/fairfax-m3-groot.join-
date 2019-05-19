@@ -1,0 +1,61 @@
+
+
+
+.align_share{
+    display:flex;
+    justify-content: center;
+
+}
+
+.align_share_text{
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.icon__id-card{
+width: 25px;
+height: 25px;
+}
+.twitter-share-button{
+    width: 181px;
+    height: 30px;
+    margin: 14px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0px 4px 0 rgba($color-black700, 0.32);
+    background-color: $color-blueTwitter;
+    padding-right: 9px;
+    text-decoration: none;
+
+    text-align: center;    
+    color: $color-white100;
+    font-family: $font-primary;
+    font-size: $font-size-S;
+    font-weight: $font-weight-thin;
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.icon__twitter{
+    width: 20px;
+    height: 20px;
+    }
+
+.card-create{
+    font-size: $font-size-L;
+    font-weight: $font-weight-thick;
+    margin: 20px;
+}
+
+.card-link{
+    text-decoration: none;
+    font-size: $font-size-XXS;
+    &:link{
+        color: $color-orangeIcons;
+    }
+}
