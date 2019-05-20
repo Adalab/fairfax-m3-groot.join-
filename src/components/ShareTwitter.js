@@ -6,22 +6,21 @@ const urlBack = 'http://urlBack.com';
 class ShareTwitter extends Component {
     render() {
         return (
-            <section class="align_share align_share_text">
-                <p class="card-create">La tarjeta ha sido creada</p>
+            <section className="align_share align_share_text">
+                <p className="card-create">La tarjeta ha sido creada</p>
                 <p>
-                    <a class="card-link" href={urlBack}>{urlBack}</a>
+                    <a className="card-link" href={urlBack}>{urlBack}</a>
                 </p>
-                <div class="align_share">
+                <div className="align_share">
                     <a
-                        class="twitter-share-button"
+                        className="twitter-share-button"
                         href={'https://twitter.com/intent/tweet?text= Mirad%20que%20tarjeta%20más%20chachi%20he%20creado%20con%20la%20aplicación%20"Awesome%20Profile-cards"&url=' + urlBack}
                         data-size="large"
                         target="_blank"
                         rel="noopener noreferrer"
-
                     >
                         <img
-                            class="icon__twitter"
+                            className="icon__twitter"
                             src={iconTwitter}
                             alt="compatir en Twitter"
                         />Compartir en Twitter
