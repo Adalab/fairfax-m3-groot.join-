@@ -1,42 +1,87 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import Input from "./Input";
+import InputFR from "./InputFR";
+
 class FormFill extends Component {
-    render() {
-        return (
-            <fieldset className="form__fieldset">
-                <div className="fieldset__title trigger__fill">
-                    <i className="far fa-keyboard form__icons"></i>
-                    <legend className="fieldset__title-text">Rellena</legend>
-                    <i className="form__arrow-icons arrow2 fas fa-chevron-down"></i>
-                </div>
-                <div className="fieldset__fill-container wrapper__fill"> {/* borramos clase hide */}
-                    <label for="name" className="title-label">Nombre completo</label>
-                    <input type="text" id="name" name="name" placeholder="Ej: Mary Fairfax" className="input-box" />
+  render() {
+    return (
+      <fieldset className="form__fieldset">
 
-                    <label for="position" className="title-label">Puesto</label>
-                    <input type="text" id="position" name="job" placeholder="Ej: Front-end developer" required className="input-box" />
-
-                    <label for="profile-picture" className="title-label">Foto de perfil</label>
-                    <input type="file" id="profile-picture" name="photo" className="js__profile-upload-btn" required /> {/* borramos clase hide */}
-                    <div className="js__profile-container">
-                        <div className="js__profile-preview thumbnail"></div>
-                        <button type="button" className="js__profile-trigger button__add-image">Añadir imagen</button>
-                    </div>
-
-                    <label for="phone" className="title-label">Teléfono</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Ej: 666-55-44-33" required className="input-box phone" />
-
-                    <label for="email" className="title-label">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: mary-fairfax@gmail.com" required className="input-box input-mail" />
-
-                    <label for="Linkedin" className="title-label">Linkedin</label>
-                    <input type="url" id="Linkedin" name="linkedin" className="input-box" placeholder="Ej:https://linkedin.com/in/mary.fairfax" required />
-
-                    <label for="github" className="title-label">Github</label>
-                    <input type="url" id="github" className="input-box" name="github" placeholder="Ej: https://github.com/mary-fairfax" />
-                </div>
-            </fieldset>
-        )
-    }
+        <div className="fieldset__fill-container wrapper__fill">
+          <Input
+            id="name"
+            label="Nombre completo"
+            type="text"
+            placeholder="Ej: Mary Fairfax"
+            value={this.props.name}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+          <Input
+            id="job"
+            label="Puesto"
+            type="text"
+            placeholder="Ej: Front-end developer"
+            value={this.props.job}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+          
+          <InputFR 
+            getImage={this.props.getImage}
+            photo={this.props.photo}
+          />
+          {/* <input
+            type="file"
+            id="profile-picture"
+            name="photo"
+            className="js__profile-upload-btn"
+            required
+          />{" "}
+          {/* borramos clase hide */}
+          {/* <div className="js__profile-container">
+            <div className="js__profile-preview thumbnail" />
+            <button
+              type="button"
+              className="js__profile-trigger button__add-image"
+            >
+              Añadir imagen
+            </button> */} 
+          {/* </div> */}
+          <Input
+            id="phone"
+            label="Teléfono"
+            type="tel"
+            placeholder="Ej: 666-55-44-33"
+            value={this.props.phone}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+          <Input
+            id="email"
+            label="Email"
+            type="email"
+            placeholder="Ej: mary-fairfax@gmail.com"
+            value={this.props.email}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+          <Input
+            id="linkedin"
+            label="Linkedin"
+            type="url"
+            placeholder="Ej: https://linkedin.com/in/mary.fairfax"
+            value={this.props.linkedin}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+          <Input
+            id="github"
+            label="Github"
+            type="url"
+            placeholder="Ej: https://github.com/mary-fairfax"
+            value={this.props.github}
+            handleChangeCard={this.props.handleChangeCard}
+          />
+        </div>
+      </fieldset>
+    );
+  }
 }
 
 export default FormFill;
