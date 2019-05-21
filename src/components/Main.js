@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Preview from "./Preview";
 import Form from "./Form";
+import { fetchCard } from "./../services/SendToBack";
 
 class Main extends Component {
   constructor(props) {
@@ -15,12 +16,46 @@ class Main extends Component {
         linkedin: "",
         github: "",
         photo: ""
-      }
+      },
+      url: '',
+      error: ''
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
     this.getImage = this.getImage.bind(this);
+    this.handleClickCreate = this.handleClickCreate.bind(this);
 
   }
+
+  handleClickCreate() {
+    console.log(this.state.card);
+    fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+      method: 'POST',
+      body: JSON.stringify(this.state.card),
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(resp => resp.json())
+      .then(data => {
+        if (data.success) {
+          this.setState({
+            url: data.cardURL,
+            error: ''
+          })
+        } else {
+          this.setState({
+            error: data.error,
+            url: ''
+          })
+        }
+        console.log(data.cardURL);
+      })
+
+
+      .catch(error => console.log(error));
+
+  }
+
 
   getImage(image) {
     this.setState(
@@ -82,6 +117,9 @@ class Main extends Component {
           github={this.state.card.github}
           handleChangeCard={this.handleChangeCard}
           getImage={this.getImage}
+          handleClickCreate={this.handleClickCreate}
+          stateUrl={this.state.url}
+          stateError={this.state.error}
         />
       </div>
     );

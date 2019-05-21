@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import iconTwitter from './../images/twitter.png'
 
-const urlBack = 'http://urlBack.com';
+
 
 class ShareTwitter extends Component {
     render() {
+        const urlBack = this.props.stateUrl || this.props.stateError;
+
         return (
             <section className="align_share align_share_text">
                 <p className="card-create">La tarjeta ha sido creada</p>

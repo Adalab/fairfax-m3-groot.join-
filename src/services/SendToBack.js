@@ -8,9 +8,9 @@ const fetchCard = (userData) => {
             'content-type': 'application/json'
         },
     })
-        .then(function (resp) { console.log (resp.json()); })
-        // .then(function (result) { showURL(result); })
-        .catch(function (error) { console.log(error); });
+        .then(resp => resp.json())
+    // .then(function (result) { showURL(result); })
+    // .catch(function (error) { console.log(error); });
 }
 
 
@@ -27,4 +27,4 @@ const fetchCard = (userData) => {
 //         console.error(`Ha sucedido un error: ${error}`);
 //     }
 
-     export default SendToBack;
+export { fetchCard };
