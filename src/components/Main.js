@@ -19,7 +19,6 @@ class Main extends Component {
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
     this.getImage = this.getImage.bind(this);
-
   }
 
   getImage(image) {
