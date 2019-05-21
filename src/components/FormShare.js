@@ -5,7 +5,9 @@ import ShareTwitter from './ShareTwitter';
 class FormShare extends Component {
 
     render() {
+        const showTwitter = this.props.stateUrl === this.props.stateError ? 'hide' : '';
         return (
+
             <fieldset className="form__fieldset">
                 <div className="fieldset__share-container form__share ">{/* borramos clase hide */}
                     <button onClick={this.props.handleClickCreate} className="button__create" type="button">
@@ -15,7 +17,8 @@ class FormShare extends Component {
                     <ShareTwitter
                         handleClickCreate={this.props.handleClickCreate}
                         stateUrl={this.props.stateUrl}
-                        stateError={this.props.stateError} />
+                        stateError={this.props.stateError}
+                        showTwitter={showTwitter} />
 
                 </div>
             </fieldset >

@@ -8,7 +8,7 @@ class ShareTwitter extends Component {
         const urlBack = this.props.stateUrl || this.props.stateError;
 
         return (
-            <section className="align_share align_share_text">
+            <section className={`align_share align_share_text ${this.props.showTwitter}`}>
                 <p className="card-create">La tarjeta ha sido creada</p>
                 <p>
                     <a className="card-link" href={urlBack}>{urlBack}</a>
