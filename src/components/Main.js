@@ -1,37 +1,51 @@
-import React, { Component } from "react";
-import Preview from "./Preview";
-import Form from "./Form";
+import React, { Component } from 'react'
+import Preview from './Preview'
+import Form from './Form'
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       card: {
-        palette: "1",
-        name: "",
-        job: "",
-        phone: "",
-        email: "",
-        linkedin: "",
-        github: "",
-        photo: ""
+        palette: '1',
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo: ''
       },
       url: '',
       error: ''
-    };
-    this.handleChangeCard = this.handleChangeCard.bind(this);
-    this.getImage = this.getImage.bind(this);
-    this.handleClickCreate = this.handleClickCreate.bind(this);
+    }
+    this.handleChangeCard = this.handleChangeCard.bind(this)
+    this.getImage = this.getImage.bind(this)
+    this.handleClickCreate = this.handleClickCreate.bind(this)
+    this.handleResetClick = this.handleResetClick.bind(this)
 
   }
 
-  handleClickCreate() {
+  handleResetClick(){
+    this.setState({
+      palette: '1',
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      photo: ''
+    })
+  }
+
+  handleClickCreate () {
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
       body: JSON.stringify(this.state.card),
       headers: {
         'content-type': 'application/json'
-      },
+      }
     })
       .then(resp => resp.json())
       .then(data => {
@@ -47,12 +61,10 @@ class Main extends Component {
           })
         }
       })
-      .catch(error => console.log(error));
-
+      .catch(error => console.log(error))
   }
 
-
-  getImage(image) {
+  getImage (image) {
     this.setState(
       prevState => {
         return {
@@ -60,17 +72,17 @@ class Main extends Component {
             ...prevState.card,
             photo: image
           }
-        };
+        }
       },
       () => {
-        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
+        localStorage.setItem('cardLS', JSON.stringify(this.state.card))
       }
-    );
+    )
   }
 
-  handleChangeCard(event) {
-    const value = event.currentTarget.value;
-    const name = event.currentTarget.name;
+  handleChangeCard (event) {
+    const value = event.currentTarget.value
+    const name = event.currentTarget.name
     this.setState(
       prevState => {
         return {
@@ -78,17 +90,17 @@ class Main extends Component {
             ...prevState.card,
             [name]: value
           }
-        };
+        }
       },
       () => {
-        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
+        localStorage.setItem('cardLS', JSON.stringify(this.state.card))
       }
-    );
+    )
   }
 
-  render() {
+  render () {
     return (
-      <div className="main-page__container">
+      <div className='main-page__container'>
         <Preview
           palette={this.state.card.palette}
           name={this.state.card.name}
@@ -98,6 +110,7 @@ class Main extends Component {
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
           github={this.state.card.github}
+          handleResetClick={this.handleResetClick}
         />
         <Form
           palette={this.state.card.palette}
@@ -115,8 +128,8 @@ class Main extends Component {
           stateError={this.state.error}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Main;
+export default Main

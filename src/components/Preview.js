@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Reset from "./Reset";
 import PropTypes from "prop-types";
 import groot from "./../images/groot.jpeg";
 
@@ -16,10 +17,7 @@ class Preview extends Component {
     const preview = (
       <aside className={`section__preview ${theme(this.props.palette)}`}>
         <div>
-          <button className="button__reset">
-            <i className="far fa-trash-alt" />
-            Reset
-          </button>
+          <Reset handleResetClick={this.props.handleResetClick} />
           <section className="card__preview ">
             <p className="name">
               {this.props.name ? this.props.name : "Nombre Apellido"}
