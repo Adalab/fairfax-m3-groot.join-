@@ -28,12 +28,10 @@ class Main extends Component {
     localStorage.setItem("cardLS", JSON.stringify(this.state.card))
   }
   componentDidMount(){
-   
     if(localStorage.cardLS){
       const objectFromLS= JSON.parse(localStorage.getItem("cardLS"));
       this.setState({
-        name: objectFromLS.name,
-        job: objectFromLS.job,
+        card: objectFromLS
       })
     }
   }
