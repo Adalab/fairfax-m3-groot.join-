@@ -4,8 +4,6 @@ import logo from "./../images/awesome_cards_logo.svg";
 
 class Header extends Component {
   render() {
-    console.log(this.props.headerClass);
-
     const header = (
       <header className={`header__${this.props.headerClass}`}>
         <Link to="/">
