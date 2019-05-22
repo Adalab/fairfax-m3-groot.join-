@@ -9,7 +9,7 @@ class FormShare extends Component {
         return (
 
             <fieldset className="form__fieldset">
-                <div className="fieldset__share-container form__share ">{/* borramos clase hide */}
+                <div className="fieldset__share-container form__share ">
                     <button onClick={this.props.handleClickCreate} className="button__create" type="button">
                         <i className="far fa-address-card form__card-icon"></i>
                         Crear tarjeta

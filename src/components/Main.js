@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Preview from "./Preview";
 import Form from "./Form";
-import { fetchCard } from "./../services/SendToBack";
 
 class Main extends Component {
   constructor(props) {
@@ -27,7 +26,6 @@ class Main extends Component {
   }
 
   handleClickCreate() {
-    console.log(this.state.card);
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
       body: JSON.stringify(this.state.card),
@@ -48,10 +46,7 @@ class Main extends Component {
             url: ''
           })
         }
-        console.log(data.cardURL);
       })
-
-
       .catch(error => console.log(error));
 
   }
@@ -76,7 +71,6 @@ class Main extends Component {
   handleChangeCard(event) {
     const value = event.currentTarget.value;
     const name = event.currentTarget.name;
-    console.log(name, value);
     this.setState(
       prevState => {
         return {
@@ -95,7 +89,6 @@ class Main extends Component {
   render() {
     return (
       <div className="main-page__container">
-        {/* <button onClick={this.info}>INFO</button> */}
         <Preview
           palette={this.state.card.palette}
           name={this.state.card.name}
