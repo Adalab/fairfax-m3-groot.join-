@@ -22,9 +22,19 @@ class Main extends Component {
     this.handleChangeCard = this.handleChangeCard.bind(this);
     this.getImage = this.getImage.bind(this);
     this.handleClickCreate = this.handleClickCreate.bind(this);
-
   }
 
+  componentDidUpdate(prevProps,prevState){
+    localStorage.setItem("cardLS", JSON.stringify(this.state.card))
+  }
+  componentDidMount(){
+    if(localStorage.cardLS){
+      const objectFromLS= JSON.parse(localStorage.getItem("cardLS"));
+      this.setState({
+        card: objectFromLS
+      })
+    }
+  }
   handleClickCreate() {
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
@@ -51,7 +61,6 @@ class Main extends Component {
 
   }
 
-
   getImage(image) {
     this.setState(
       prevState => {
@@ -61,11 +70,7 @@ class Main extends Component {
             photo: image
           }
         };
-      },
-      () => {
-        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
-      }
-    );
+    });
   }
 
   handleChangeCard(event) {
@@ -80,9 +85,6 @@ class Main extends Component {
           }
         };
       },
-      () => {
-        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
-      }
     );
   }
 
