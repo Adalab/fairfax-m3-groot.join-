@@ -6,6 +6,7 @@ import iconTwitter from './../images/twitter.png'
 class ShareTwitter extends Component {
     render() {
         const hideTwitter = this.props.stateError ? 'hide' : ''
+        const msgBack = this.props.stateError ? 'Ops! Parece que faltan campos por rellenar' : this.props.stateUrl;
         const urlBack = this.props.stateUrl || this.props.stateError;
 
 
@@ -13,7 +14,7 @@ class ShareTwitter extends Component {
             <section className={`align_share align_share_text ${this.props.showTwitter}`}>
                 <p className={`card-create ${hideTwitter}`}>La tarjeta ha sido creada</p>
                 <p>
-                    <a className="card-link" href={urlBack}>{urlBack}</a>
+                    <a className="card-link" href={urlBack}>{msgBack}</a>
                 </p>
                 <div className={`align_share ${hideTwitter}`}>
                     <a
