@@ -54,13 +54,19 @@ class Form extends Component {
             photo={this.props.photo}
           />
         </Collapsibles>
+
         <Collapsibles
           name="Comparte"
           icon="fas fa-share-alt form__icons"
           handleCollapsible={this.handleCollapsible}
           open={this.state.open}
         >
-          <FormShare card={this.props} />
+          <FormShare
+            loading={this.props.loading}
+            handleClickCreate={this.props.handleClickCreate}
+            stateUrl={this.props.stateUrl}
+            stateError={this.props.stateError}
+          />
         </Collapsibles>
       </form>
     );
