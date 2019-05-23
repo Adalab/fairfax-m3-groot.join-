@@ -17,7 +17,8 @@ class Main extends Component {
         photo: ""
       },
       url: '',
-      error: ''
+      error: '',
+      loading: false
     };
     this.handleChangeCard = this.handleChangeCard.bind(this);
     this.getImage = this.getImage.bind(this);
@@ -36,6 +37,9 @@ class Main extends Component {
     }
   }
   handleClickCreate() {
+    this.setState({
+      loading: true
+    })
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
       body: JSON.stringify(this.state.card),
@@ -48,12 +52,15 @@ class Main extends Component {
         if (data.success) {
           this.setState({
             url: data.cardURL,
-            error: ''
+            error: '',
+            loading: false
+
           })
         } else {
           this.setState({
             error: data.error,
-            url: ''
+            url: '',
+            loading: false
           })
         }
       })
@@ -115,6 +122,7 @@ class Main extends Component {
           handleClickCreate={this.handleClickCreate}
           stateUrl={this.state.url}
           stateError={this.state.error}
+          loading={this.state.loading}
         />
       </div>
     );
