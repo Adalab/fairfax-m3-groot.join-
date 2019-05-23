@@ -1,30 +1,47 @@
-import React, { Component } from "react";
-import Preview from "./Preview";
-import Form from "./Form";
+import React, { Component } from 'react'
+import Preview from './Preview'
+import Form from './Form'
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       card: {
-        palette: "1",
-        name: "",
-        job: "",
-        phone: "",
-        email: "",
-        linkedin: "",
-        github: "",
-        photo: ""
+        palette: '1',
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo: ''
       },
       url: '',
       error: '',
       loading: false
-    };
-    this.handleChangeCard = this.handleChangeCard.bind(this);
-    this.getImage = this.getImage.bind(this);
-    this.handleClickCreate = this.handleClickCreate.bind(this);
+    }
+    this.handleChangeCard = this.handleChangeCard.bind(this)
+    this.getImage = this.getImage.bind(this)
+    this.handleClickCreate = this.handleClickCreate.bind(this)
+    this.handleResetClick = this.handleResetClick.bind(this)
+
   }
 
+  handleResetClick(){
+    this.setState({
+       card: {
+        palette: '1',
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo: ''
+      }
+    })
+  }
+  
   componentDidUpdate(prevProps,prevState){
     localStorage.setItem("cardLS", JSON.stringify(this.state.card))
   }
@@ -36,6 +53,7 @@ class Main extends Component {
       })
     }
   }
+  
   handleClickCreate() {
     this.setState({
       loading: true
@@ -45,7 +63,7 @@ class Main extends Component {
       body: JSON.stringify(this.state.card),
       headers: {
         'content-type': 'application/json'
-      },
+      }
     })
       .then(resp => resp.json())
       .then(data => {
@@ -64,8 +82,7 @@ class Main extends Component {
           })
         }
       })
-      .catch(error => console.log(error));
-
+      .catch(error => console.log(error))
   }
 
   getImage(image) {
@@ -77,12 +94,12 @@ class Main extends Component {
             photo: image
           }
         };
-    });
+      });
   }
 
-  handleChangeCard(event) {
-    const value = event.currentTarget.value;
-    const name = event.currentTarget.name;
+  handleChangeCard (event) {
+    const value = event.currentTarget.value
+    const name = event.currentTarget.name
     this.setState(
       prevState => {
         return {
@@ -95,9 +112,9 @@ class Main extends Component {
     );
   }
 
-  render() {
+  render () {
     return (
-      <div className="main-page__container">
+      <div className='main-page__container'>
         <Preview
           palette={this.state.card.palette}
           name={this.state.card.name}
@@ -107,6 +124,7 @@ class Main extends Component {
           email={this.state.card.email}
           linkedin={this.state.card.linkedin}
           github={this.state.card.github}
+          handleResetClick={this.handleResetClick}
         />
         <Form
           palette={this.state.card.palette}
@@ -125,8 +143,8 @@ class Main extends Component {
           loading={this.state.loading}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Main;
+export default Main
