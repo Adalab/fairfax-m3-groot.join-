@@ -17,7 +17,12 @@ class Main extends Component {
         photo: ''
       },
       url: '',
+<<<<<<< HEAD
       error: ''
+=======
+      error: '',
+      loading: false
+>>>>>>> fbb884d5f4688e2e7f3a8a0f47d184f9ed274fc2
     }
     this.handleChangeCard = this.handleChangeCard.bind(this)
     this.getImage = this.getImage.bind(this)
@@ -40,8 +45,28 @@ class Main extends Component {
       }
     })
   }
+<<<<<<< HEAD
 
   handleClickCreate () {
+=======
+  
+  componentDidUpdate(prevProps,prevState){
+    localStorage.setItem("cardLS", JSON.stringify(this.state.card))
+  }
+  componentDidMount(){
+    if(localStorage.cardLS){
+      const objectFromLS= JSON.parse(localStorage.getItem("cardLS"));
+      this.setState({
+        card: objectFromLS
+      })
+    }
+  }
+  
+  handleClickCreate() {
+    this.setState({
+      loading: true
+    })
+>>>>>>> fbb884d5f4688e2e7f3a8a0f47d184f9ed274fc2
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
       body: JSON.stringify(this.state.card),
@@ -66,7 +91,11 @@ class Main extends Component {
       .catch(error => console.log(error))
   }
 
+<<<<<<< HEAD
   getImage (image) {
+=======
+  getImage(image) {
+>>>>>>> fbb884d5f4688e2e7f3a8a0f47d184f9ed274fc2
     this.setState(
       prevState => {
         return {
@@ -74,12 +103,17 @@ class Main extends Component {
             ...prevState.card,
             photo: image
           }
+<<<<<<< HEAD
         }
       },
       () => {
         localStorage.setItem('cardLS', JSON.stringify(this.state.card))
       }
     )
+=======
+        };
+      });
+>>>>>>> fbb884d5f4688e2e7f3a8a0f47d184f9ed274fc2
   }
 
   handleChangeCard (event) {
@@ -92,12 +126,16 @@ class Main extends Component {
             ...prevState.card,
             [name]: value
           }
-        }
+        };
       },
+<<<<<<< HEAD
       () => {
         localStorage.setItem('cardLS', JSON.stringify(this.state.card))
       }
     )
+=======
+    );
+>>>>>>> fbb884d5f4688e2e7f3a8a0f47d184f9ed274fc2
   }
 
   render () {
