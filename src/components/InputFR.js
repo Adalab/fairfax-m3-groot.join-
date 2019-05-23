@@ -14,7 +14,7 @@ class InputFR extends React.Component {
 
   render() {
     return (
-      <ReactFileReader base64={true} handleFiles={this.handleFiles}>
+      <div className="inputfr" base64={true} handleFiles={this.handleFiles}>
         <label htmlFor="profile-picture" className="title-label title-image-label">Foto de perfil
         </label>
         <div className="js__profile-container">
@@ -23,7 +23,7 @@ class InputFR extends React.Component {
             Añadir imagen
           </button>
         </div>
-      </ReactFileReader>
+      </div>
     );
   }
 }
