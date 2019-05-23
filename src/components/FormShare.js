@@ -15,9 +15,10 @@ class FormShare extends Component {
                         Crear tarjeta
                      </button>
                     <ShareTwitter
-                        handleClickCreate={this.props.handleClickCreate}
+                        //handleClickCreate={this.props.handleClickCreate}
                         stateUrl={this.props.stateUrl}
                         stateError={this.props.stateError}
+                        loading={this.props.loading}
                         showTwitter={showTwitter} />
 
                 </div>
