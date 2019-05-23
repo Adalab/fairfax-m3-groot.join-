@@ -62,7 +62,7 @@ class Preview extends Component {
 Preview.propTypes = {
   name: PropTypes.string,
   job: PropTypes.string,
-  phone: PropTypes.number,
+  phone: PropTypes.string,
   email: PropTypes.string
 };
 
