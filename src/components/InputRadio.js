@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class InputRadio extends Component {
-  render() {    
+  render() {
     return (
       <label className="theme" htmlFor={`theme-${this.props.id}`}>
         <input

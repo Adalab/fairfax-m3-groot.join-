@@ -27,8 +27,6 @@ class Main extends Component {
   }
 
   handleClickCreate() {
-    console.log("entra en handleclickcreate");
-
     this.setState({
       loading: true
     })

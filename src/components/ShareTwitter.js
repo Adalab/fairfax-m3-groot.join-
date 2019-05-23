@@ -6,17 +6,9 @@ import iconTwitter from './../images/twitter.png'
 class ShareTwitter extends Component {
     render() {
         const urlBack = this.props.stateUrl || this.props.stateError;
-        console.log("entra en sharetwitter");
-        console.log(urlBack);
-
-        // if (this.props.loading === true) {
-        //     console.log("entra en el if de loading");
-        //     return <p>Loading...</p>
-        // }
 
         return (
             <section className={`align_share align_share_text ${this.props.showTwitter}`}>
-                <p>{this.props.loading === true ? <p>loading...</p> : ''}</p>
                 <p className="card-create">La tarjeta ha sido creada</p>
                 <p>
                     <a className="card-link" href={urlBack}>{urlBack}</a>
