@@ -28,14 +28,16 @@ class Main extends Component {
 
   handleResetClick(){
     this.setState({
-      palette: '1',
-      name: '',
-      job: '',
-      phone: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      photo: ''
+       card: {
+        palette: '1',
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo: ''
+      }
     })
   }
 
