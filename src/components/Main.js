@@ -24,7 +24,7 @@ class Main extends Component {
     this.handleClickCreate = this.handleClickCreate.bind(this);
   }
 
-  componentDidUpate(prevProps,prevState){
+  componentDidUpdate(prevProps,prevState){
     localStorage.setItem("cardLS", JSON.stringify(this.state.card))
   }
   componentDidMount(){
@@ -85,9 +85,6 @@ class Main extends Component {
           }
         };
       },
-      () => {
-        localStorage.setItem("cardLS", JSON.stringify(this.state.card));
-      }
     );
   }
 
