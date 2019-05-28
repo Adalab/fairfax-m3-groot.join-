@@ -5,7 +5,7 @@ import groot from "./../images/groot.jpeg";
 
 class Preview extends Component {
   render() {
-    const theme = (palette) => {
+    const theme =  (palette) => {
       if (parseInt(palette) === 1) {
         return 'theme--green';
       } else if (parseInt(palette) === 2) {
@@ -25,7 +25,7 @@ class Preview extends Component {
             <p className="job">
               {this.props.job ? this.props.job : "Front-end developer"}
             </p>
-            <div className="card__photo" style={{ backgroundImage: `url(${this.props.photo || groot})` }} />
+            <div className="card__photo" style={{backgroundImage: `url(${this.props.photo || groot})`}} />
             <ul className="social__links">
               <li>
                 <a className="social__button phone__icon" href={`tel:${this.props.phone}`}>
@@ -41,12 +41,12 @@ class Preview extends Component {
                 </a>
               </li>
               <li>
-                <a className="social__button linkedin" href={this.props.linkedin} target="_blank" rel="noopener noreferrer">
+                <a className="social__button linkedin" href={this.props.linkedin} target="_blank">
                   <i className="fab fa-linkedin-in" />
                 </a>
               </li>
               <li>
-                <a className="social__button github" href={this.props.github} target="_blank" rel="noopener noreferrer">
+                <a className="social__button github" href={this.props.github} target="_blank">
                   <i className="fab fa-github-alt" />
                 </a>
               </li>
