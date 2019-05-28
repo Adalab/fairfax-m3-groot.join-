@@ -41,12 +41,12 @@ class Preview extends Component {
                 </a>
               </li>
               <li>
-                <a className="social__button linkedin" href={this.props.linkedin} target="_blank">
+                <a className="social__button linkedin" href={this.props.linkedin} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin-in" />
                 </a>
               </li>
               <li>
-                <a className="social__button github" href={this.props.github} target="_blank">
+                <a className="social__button github" href={this.props.github} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github-alt" />
                 </a>
               </li>
