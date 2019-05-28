@@ -36,7 +36,8 @@ class Form extends Component {
             card={this.props}
             handleClickCreate={this.props.handleClickCreate}
             stateUrl={this.props.stateUrl}
-            stateError={this.props.stateError} />
+            stateError={this.props.stateError}
+            loading={this.props.loading} />
         </Collapsibles >
 
       </form>

@@ -70,12 +70,14 @@ class Main extends Component {
         if (data.success) {
           this.setState({
             url: data.cardURL,
-            error: ''
+            error: '',
+            loading: false
           })
         } else {
           this.setState({
             error: data.error,
-            url: ''
+            url: '',
+            loading: false
           })
         }
       })
@@ -137,6 +139,7 @@ class Main extends Component {
           handleClickCreate={this.handleClickCreate}
           stateUrl={this.state.url}
           stateError={this.state.error}
+          loading={this.state.loading}
         />
       </div>
     )

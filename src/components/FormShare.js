@@ -13,7 +13,8 @@ class FormShare extends Component {
                     <button onClick={this.props.handleClickCreate} className="button__create" type="button">
                         <i className="far fa-address-card form__card-icon"></i>
                         Crear tarjeta
-                     </button>
+                    </button>
+                    <div>{this.props.loading === true ? <div class="lds-dual-ring"></div> : ''}</div>
                     <ShareTwitter
                         handleClickCreate={this.props.handleClickCreate}
                         stateUrl={this.props.stateUrl}
