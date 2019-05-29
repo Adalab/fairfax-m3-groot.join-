@@ -49,7 +49,7 @@ class FormFill extends Component {
             id="linkedin"
             label="Linkedin"
             type="url"
-            placeholder="Ej: https://linkedin.com/in/mary.fairfax"
+            placeholder="Ej: mary.fairfax"
             value={this.props.linkedin}
             handleChangeCard={this.props.handleChangeCard}
           />
@@ -57,7 +57,7 @@ class FormFill extends Component {
             id="github"
             label="Github"
             type="url"
-            placeholder="Ej: https://github.com/mary-fairfax"
+            placeholder="Ej: mary-fairfax"
             value={this.props.github}
             handleChangeCard={this.props.handleChangeCard}
           />
