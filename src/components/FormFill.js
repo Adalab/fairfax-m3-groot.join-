@@ -29,23 +29,6 @@ class FormFill extends Component {
             getImage={this.props.getImage}
             photo={this.props.photo}
           />
-          {/* <input
-            type="file"
-            id="profile-picture"
-            name="photo"
-            className="js__profile-upload-btn"
-            required
-          />{" "}
-          {/* borramos clase hide */}
-          {/* <div className="js__profile-container">
-            <div className="js__profile-preview thumbnail" />
-            <button
-              type="button"
-              className="js__profile-trigger button__add-image"
-            >
-              Añadir imagen
-            </button> */} 
-          {/* </div> */}
           <Input
             id="phone"
             label="Teléfono"

@@ -5,7 +5,7 @@ class Reset extends React.Component {
     return (
       <button onClick={this.props.handleResetClick} className='button__reset'>
         <i className='far fa-trash-alt' />
-        Reset
+         {` Reset`}
       </button>
     )
   }
