@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Reset from "./Reset";
 import PropTypes from "prop-types";
 import groot from "./../images/groot.jpeg";
 
 class Preview extends Component {
   render() {
-    const theme = (palette) => {
+    const theme =  (palette) => {
       if (parseInt(palette) === 1) {
         return 'theme--green';
       } else if (parseInt(palette) === 2) {
@@ -16,10 +17,7 @@ class Preview extends Component {
     const preview = (
       <aside className={`section__preview ${theme(this.props.palette)}`}>
         <div>
-          <button className="button__reset">
-            <i className="far fa-trash-alt" />
-            Reset
-          </button>
+          <Reset handleResetClick={this.props.handleResetClick} />
           <section className="card__preview ">
             <p className="name">
               {this.props.name ? this.props.name : "Nombre Apellido"}
@@ -27,7 +25,7 @@ class Preview extends Component {
             <p className="job">
               {this.props.job ? this.props.job : "Front-end developer"}
             </p>
-            <div className="card__photo" style={{ backgroundImage: `url(${this.props.photo || groot})` }} />
+            <div className="card__photo" style={{backgroundImage: `url(${this.props.photo || groot})`}} />
             <ul className="social__links">
               <li>
                 <a className="social__button phone__icon" href={`tel:${this.props.phone}`}>

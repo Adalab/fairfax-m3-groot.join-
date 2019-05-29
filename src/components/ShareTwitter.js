@@ -9,7 +9,6 @@ class ShareTwitter extends Component {
         const msgBack = this.props.stateError ? 'Ops! Parece que faltan campos por rellenar' : this.props.stateUrl;
         const urlBack = this.props.stateUrl || this.props.stateError;
 
-
         return (
             <section className={`align_share align_share_text ${this.props.showTwitter}`}>
                 <p className={`card-create ${hideTwitter}`}>La tarjeta ha sido creada</p>
